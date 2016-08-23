@@ -24,6 +24,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
 }
 
+.page-2 a,
+.page-2 a:hover {
+  color: #776136;
+}
+
 .page-3 {
   background-color: #425A78;
 }
@@ -48,8 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hello-badge {
-  position: absolute;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hello-badge h1,
