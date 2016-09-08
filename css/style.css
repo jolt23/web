@@ -2,7 +2,7 @@ body {
   font-family: 'Raleway', sans-serif;
   color: #FFF;
   background-color: #809EC4;
-  background-image: url(../img/miami-aerial.jpeg);
+  background-image: url(../img/miami-aerial-4k.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -114,6 +114,18 @@ footer {
   text-align: right;
 }
 
+@media (max-width: 2048px) {
+  body {
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    background-color: #809EC4;
+    background-image: url(../img/miami-aerial-2k.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 @media (min-width: 768px) {
   .margin-top-20 {
     margin-top: 25%;
@@ -134,7 +146,7 @@ footer {
 
 @media (max-width: 412px) {
   body {
-    background-image: url(../img/miami-aerial-2.jpeg);
+    background-image: url(../img/miami-aerial-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
