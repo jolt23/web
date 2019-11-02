@@ -1,0 +1,146 @@
+.page-wrapper {
+  height: 100vh;
+
+  .background {
+    position: fixed;
+    height:100%;
+    width: 100%;
+  }
+
+  .section {
+    height: 100%;
+    padding: 0;
+
+  }
+
+  section {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    h1.opening-act-h1 {
+      margin: 20px 0 0 0;
+      font-family: 'Poiret One', cursive;
+    }
+    
+    .next-page-nav-button {
+      color: #FFF;
+      border: 0;
+      background-color: transparent;
+      padding-bottom: 30px;
+
+      .bounce {
+        display: inline-block;
+        position: relative;
+        -moz-animation: bounce 0.5s infinite linear;
+        -o-animation: bounce 0.5s infinite linear;
+        -webkit-animation: bounce 0.5s infinite linear;
+        animation: bounce 0.5s infinite linear;
+      }
+
+      a {
+        color: #FFF;
+      }
+
+      :focus {
+        outline-color: transparent;
+        outline-width: 0;
+      }
+
+      .next-page-stack.fa-stack {
+        bottom: 15px;
+      }
+    }
+  }
+
+  .page-1 {
+    background-color: transparent;
+
+    .uk-first-column {
+      padding-left: 0px;
+    }
+
+    p {
+      color: #FFF;
+    }
+  }
+
+  .page-2 {
+    background-color: #809EC4;
+
+    p {
+      padding: 10px 0;
+    }
+
+    a,
+    a:hover {
+      color: #776136;
+    }
+  }
+  
+  .page-3 {
+    background-color: #425A78;
+
+    .uk-first-column {
+      padding-left: 0px;
+    }
+
+    footer {
+      bottom: 0;
+      text-align: center;
+
+      a {
+        color: #FFF;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-moz-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-o-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@-ms-keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+@keyframes bounce {
+  0% { top: 0; }
+  50% { top: -0.2em; }
+  70% { top: -0.3em; }
+  100% { top: 0; }
+}
+
+@media (max-width: 768px) {
+  #image_me{
+    height: 150px;
+    widows: 150px;
+  }
+}
+
+@media (max-width: 667px) {
+  p {
+    font-size: 12px;
+  }
+
+  #image_me{
+    height: 75px;
+    widows: 75px;
+  }
+}
