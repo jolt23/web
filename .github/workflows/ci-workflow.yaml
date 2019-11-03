@@ -4,7 +4,6 @@ on: [push]
 jobs:
   build:
     name: Build web
-    # This job runs on Linux
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
@@ -21,3 +20,15 @@ jobs:
         with:
           name: dist
           path: dist
+  publish:
+    name: Publish web artifacts
+    runs-on: ubuntu-18.04
+    needs: build
+    steps:
+      - name: Download math result for job 1
+        uses: actions/download-artifact@v1
+        with:
+          name: dist
+      - shell: bash
+        run: |
+          echo `ls -la dist/`
