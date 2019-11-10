@@ -28,15 +28,13 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v1
-        with:
-          path: /build
       - name: Download math result for job 1
         uses: actions/download-artifact@v1
         with:
           name: dist
-          path: /build
+          path: $GITHUB_WORKSPACE
       - shell: bash
         run: |
-          cd /build
+          cd $GITHUB_WORKSPACE
           pipenv install
           echo `ls -la`
