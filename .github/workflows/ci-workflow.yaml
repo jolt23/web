@@ -34,6 +34,7 @@ jobs:
           name: dist
           path: $GITHUB_WORKSPACE
       - shell: bash
+        uses: docker://kartografer/pipenv:3.7.5-stretch
         run: |
           cd $GITHUB_WORKSPACE
           pipenv install
