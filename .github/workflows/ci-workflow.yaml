@@ -30,7 +30,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: dist
-          path: $GITHUB_WORKSPACE
+          path: $GITHUB_WORKSPACE/
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
