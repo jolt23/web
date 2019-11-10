@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Publish to S3 bucket
+      s3_sync:
+        region: "us-east-1"
+        bucket: www.joelguilarte.com
+        file_root: ../dist/web
+        delete: yes
