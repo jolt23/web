@@ -22,18 +22,22 @@ jobs:
           path: dist
   publish:
     name: Publish web artifacts
-    container:
-      image: kartografer/pipenv:3.7.5-stretch
+    runs-on: ubuntu-18.04
     needs: build
     steps:
       - uses: actions/checkout@v1
-      - name: Download math result for job 1
+      - name: Download web dist from build job
         uses: actions/download-artifact@v1
         with:
           name: dist
           path: $GITHUB_WORKSPACE
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: [3.7]
       - shell: bash
         run: |
+          pip install pipenv
           cd $GITHUB_WORKSPACE
           pipenv install
           echo `ls -la`
