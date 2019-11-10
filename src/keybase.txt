@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/jguilarte
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://joelguilarte.com
+  * I am jguilarte (https://keybase.io/jguilarte) on keybase.
+  * I have a public key with fingerprint E4C3 9CD3 237F BF24 C269  22E7 4D28 09F5 1578 8F8C
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01012a7943240ac763f8420f855a0ba13654e6d6b8388638cfb20235008ce0b5b2860a",
+            "fingerprint": "e4c39cd3237fbf24c26922e74d2809f515788f8c",
+            "host": "keybase.io",
+            "key_id": "4d2809f515788f8c",
+            "kid": "01012a7943240ac763f8420f855a0ba13654e6d6b8388638cfb20235008ce0b5b2860a",
+            "uid": "b433bf7d9c9bcee5d80680fbf2762f19",
+            "username": "jguilarte"
+        },
+        "service": {
+            "hostname": "joelguilarte.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1482979242,
+    "expire_in": 157680000,
+    "prev": "6fb7cf5e631382824f229a2473c3355cb96529f5311976c79cb1970352ed3c50",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.61
+Comment: https://keybase.io/crypto
+
+yMIlAnicrZJbSBVBGMfPSbsoWIdK6FAabYYUVrMze5k90FUoulBkLybSaWd29rh6
+PHvcs2oihelLRReSIMwyKoiyy0O9RpSZSIaUIZVpKooWZGYQBoI1K/nWY/MyM9/8
+vv/8v4+vNS3Jl+rPzFjwefzXke/+jmeN5b58o7K5WiC2USWEqoUSNrOxqMESbrjE
+MoSQAEQgQl3VJAQloFNVQSaWIDCxLOuA6CJSZIkphkIwwlhBmJoEAohkADBlgMgE
+YgXoQo5gWrEIc+KOFXO5LJMo0qiBIFJNYkKJQkWDkKmSATHQTFmUVYxNTHlikZ3w
+Mrg5oifYBsvmMX4Jz9j7B/+ffZfPyBEJIWKqhkY1QhmTDQwUDDzrqgJNUfPABHNi
+einjdHGk3IrqjsuEYzkCD1dYlHmd9UqZRWwWnaU2ULuUC8Qd27WpHeWvRa4bD3nJ
+blXcoysZCf/VCRMrZvBe8oQK5iQsOyaERE5S1/KERQlDTdWgBHMEdjRuOSxseYSs
+cr98ed+wCi6pmESlpswUJCIMMZRMCDUdSiqiCMkyJZoiQ95ZJIqaqlBVo4QfAJIh
+MxCVgeBVVhazhZDEbeoRLpmwIjHdLXd42S1PC5N9/lTfvLlzvBnzpaYEZievt3X+
+tJD+blvWqddLbvTlbUzsP/0ADhZdG0k7N9RYFzx2Nzt/Es2tOxAhkwVNe9pWvG59
+4VZn3EhJW3d94Ml4/ZS/Zv2PK/daOk/VrT178WT75MSbpaX+rpsllQ83DcT7fUHh
+UHbt86AwfeanqNcvZIHhTcvyR1uzpuonDl62xnaUDnWvGiic127EejpEavSHTp6p
+bTq0U//QNjJ4ddfXbSOPHv/u7np7+EjUeRlcCfCl6d7awHLj+tqOLyUFu/NOpMGk
++9tf1aAsQO4EtnaPNSzuXJNbvKh4NCt99W1/5/G+ngtle9ftiwfOhzLXvIoO3wwv
+fd9gbPnY8emRvbmleTg5N/3Wtz9J6kAU
+=wHBS
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jguilarte
+
+==================================================================
