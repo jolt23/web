@@ -23,12 +23,20 @@ jobs:
   publish:
     name: Publish web artifacts
     runs-on: ubuntu-18.04
+    container:
+      image: kartografer/pipenv:3.7.5-stretch
     needs: build
     steps:
+      - uses: actions/checkout@v1
+        with:
+          path: /build
       - name: Download math result for job 1
         uses: actions/download-artifact@v1
         with:
           name: dist
+          path: /build
       - shell: bash
         run: |
-          echo `ls -la dist/`
+          cd /build
+          pipenv install
+          echo `ls -la`
