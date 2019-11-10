@@ -37,7 +37,8 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: '3.7'
-      - shell: Run Ansible playbook through pipenv
+      - name: Run Ansible playbook through pipenv
+        shell: bash
         env: 
           AWS_ACCESS_KEY_ID : ${{ secrets.AWS_ACCESSS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
