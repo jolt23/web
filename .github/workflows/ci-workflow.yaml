@@ -30,14 +30,16 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: dist
-          path: $GITHUB_WORKSPACE/
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
           python-version: '3.7'
       - shell: bash
+        env:
+          AWS_ACCESSS_KEY: ${{ secrets.AWS_ACCESSS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
         run: |
           pip install pipenv
           cd $GITHUB_WORKSPACE
           pipenv install
-          echo `ls -la`
+          pipenv run ansible-playbook ansible/playbook.yml
