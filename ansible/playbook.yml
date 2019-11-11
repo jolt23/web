@@ -1,5 +1,6 @@
 ---
 - hosts: localhost
+  connection: local
   tasks:
     - name: Publish to S3 bucket
       s3_sync:
@@ -7,3 +8,4 @@
         bucket: www.joelguilarte.com
         file_root: ../dist/web
         delete: yes
+      delegate_to: localhost

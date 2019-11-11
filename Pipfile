@@ -8,7 +8,6 @@ name = "pypi"
 [packages]
 ansible = "~=2.8.6"
 boto3 = "~=1.10.14"
-python-dateutil = "*"
 
 [requires]
 python_version = "3.7"
