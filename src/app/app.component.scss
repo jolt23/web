@@ -53,6 +53,25 @@
     }
   }
 
+  .uk-tab::before {
+    border-bottom: 1px solid #999;
+  }
+
+  .uk-tab {
+    .uk-active {
+      a {
+        color: #FFF;
+        border-color: #FFF;
+      }
+    }
+
+    * {
+      a {
+        font-size: 1.8rem
+      }
+    }
+  }
+
   .page-1 {
     background-color: transparent;
 
@@ -66,19 +85,6 @@
   }
 
   .page-2 {
-    background-color: #809EC4;
-
-    p {
-      padding: 10px 0;
-    }
-
-    a,
-    a:hover {
-      color: #776136;
-    }
-  }
-  
-  .page-3 {
     background-color: #425A78;
 
     .uk-first-column {

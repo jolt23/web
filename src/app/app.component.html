@@ -22,66 +22,61 @@
 
   <section class="section uk-section page-2">
     <div class="uk-container">
-      <div class="uk-position-medium uk-position-top">
-        <div class="">
-          <h1 class="">About</h1>
-        </div>
+      <div class="uk-position-medium">
+        <ul class="uk-flex-center" uk-tab="connect: #content-list">
+            <li class=""><a class="uk-text-large" href="#about">About</a></li>
+            <li class=""><a class="" href="#contact">Contact</a></li>
+        </ul>
       </div>
-      <div class="uk-grid-small uk-child-width-expand@s uk-flex-center" uk-grid>
-        <div class="">
-          <p>
-            I enjoy solving problems through software and automation. I am also an advocate for DevOps culture. In the past few
-            years I have been trying to bridge the gap between infrastructure teams and development teams. Trying to feel these gaps
-            has taught me alot of about how to build proper teams, and design modular software.
-          </p>
-        </div>
-        <div class="">
-          <img src="https://s.gravatar.com/avatar/78f1902ee8414592e0fb1a38a4b3e345?s=300" alt="Joel Guilarte"
-            class="uk-responsive uk-border-circle uk-margin-auto uk-display-block" id="image_me">
-        </div>
-        <div class="">
-          <p>
-            Currently I work as an Automation Architect, for the Platform Team at Royal Caribbean. I have helped put automation tooling
-            in place for infrastructure provisioning and configuration. We have also implemented CI/CD pipelines for microservices, web,
-            and mobile applications.
-          </p>
-        </div>
+      <div class="uk-height-medium">
+        <ul id="content-list" class="uk-switcher">
+          <li>
+            <div id="about-me" class="toggle-me uk-grid-small uk-child-width-expand@s uk-flex-center" uk-grid>
+              <div class="uk-text-justi">
+                <p>
+                  I enjoy solving problems through software and automation. In the past few years I have been trying to bridge the gap between
+                  infrastructure teams and development teams. Trying to fill these gaps has taught me alot of about how important team structure
+                  and organization structure is so crucial to building successful software solutions.
+                </p>
+              </div>
+              <div class="uk-text-justi">
+                <p>
+                  Currently I am a consulant for Ernst & Young, specialzing in Cloud Architecture and DevOps. I have helped clients shift to a
+                  culture of repid development on the cloud by leverging DevOps. In our implementations we seek to help teams implement CI / CD,
+                  tools but above all DevOps is a culture shift from traditional IT operations.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div id="contact-me" class="toggle-me uk-grid-small uk-child-width-expand@s uk-flex-center uk-text-center uk-margin-remove-left" uk-grid>
+              <div class="">
+                <a href="https://www.linkedin.com/in/joelguilarte" target="_blank"><i class="fab fa-linkedin fa-5x"
+                    aria-hidden="true"></i></a>
+                <div>
+                  <p class="fa-social">LinkedIn</p>
+                </div>
+              </div>
+              <div class="">
+                <a href="https://github.com/jolt23" target="_blank"><i class="fab fa-github-alt fa-5x"
+                    aria-hidden="true"></i></a>
+                <div>
+                  <p class="fa-social">GitHub</p>
+                </div>
+              </div>
+              <div class="">
+                <a href="https://twitter.com/intent/follow?screen_name=joel_guilarte"><i class="fab fa-twitter fa-5x"
+                    aria-hidden="true"></i></a>
+                <div>
+                  <p class="fa-social">Twitter</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
-
-  <section class="section uk-section page-3">
-    <div class="uk-container">
-      <div class="uk-position-medium uk-position-top">
-        <div class="">
-          <h1>Contact</h1>
-        </div>
-      </div>
-      <div class="uk-flex-center uk-position-medium uk-position-center uk-text-center" uk-grid>
-        <div class="">
-          <a href="https://www.linkedin.com/in/joelguilarte" target="_blank"><i class="fab fa-linkedin fa-5x"
-              aria-hidden="true"></i></a>
-          <div>
-            <p class="fa-social">LinkedIn</p>
-          </div>
-        </div>
-        <div class="">
-          <a href="https://github.com/jolt23" target="_blank"><i class="fab fa-github-alt fa-5x"
-              aria-hidden="true"></i></a>
-          <div>
-            <p class="fa-social">GitHub</p>
-          </div>
-        </div>
-        <div class="">
-          <a href="https://twitter.com/intent/follow?screen_name=joel_guilarte"><i class="fab fa-twitter fa-5x"
-              aria-hidden="true"></i></a>
-          <div>
-            <p class="fa-social">Twitter</p>
-          </div>
-        </div>
-      </div>
-      <div class="uk-flex-center uk-position-bottom uk-text-center">
-        <footer>
+      <div class="uk-position-medium uk-position-bottom">
+        <footer class="uk-text-center ">
           <i class="fas fa-envelope-open-text"></i>
           Email: <a href="mailto:joel@tailormade.systems">Joel Guilarte</a>
         </footer>
