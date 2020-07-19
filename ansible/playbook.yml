@@ -7,5 +7,6 @@
         region: "us-east-1"
         bucket: www.joelguilarte.com
         file_root: ../dist/web
+        file_change_strategy: checksum
         delete: yes
       delegate_to: localhost
