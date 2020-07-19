@@ -134,6 +134,15 @@
 }
 
 @media (max-width: 768px) {
+  .page-2 {
+    .tab {
+      top: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+
   #image_me{
     height: 150px;
     widows: 150px;
