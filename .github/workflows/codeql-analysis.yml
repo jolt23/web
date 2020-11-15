@@ -11,11 +11,6 @@ jobs:
     name: Analyze
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'javascript' ]
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -24,11 +19,15 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: ${{ matrix.language }}
-        # If you wish to specify custom queries, you can do so here or in a config file.
-        # By default, queries listed here will override any specified in a config file.
-        # Prefix the list here with "+" to use these queries and those in the config file.
-        # queries: ./path/to/local/query, your-org/your-repo/queries@main
+        languages: javascript
+        disable-default-queries: true
+        queries:
+          - name: Extended Security
+            uses: security-extended
+          - name: Security and Quality
+            uses: security-and-quality
+          - name: codeql javascript code scanning
+            uses: github/codeql/java/ql/src/codeql-suites/javascript-code-scanning.qls@v1.25.0
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
