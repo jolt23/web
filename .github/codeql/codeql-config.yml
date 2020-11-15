@@ -7,4 +7,4 @@ queries:
   - name: Security and Quality
     uses: security-and-quality
   - name: codeql javascript code scanning
-    uses: github/codeql/java/ql/src/codeql-suites/javascript-code-scanning.qls@v1.25.0
+    uses: github/codeql/javascript/ql/src/codeql-suites/javascript-code-scanning.qls@v1.25.0
