@@ -19,15 +19,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v1
       with:
-        languages: javascript
-        disable-default-queries: true
-        queries:
-          - name: Extended Security
-            uses: security-extended
-          - name: Security and Quality
-            uses: security-and-quality
-          - name: codeql javascript code scanning
-            uses: github/codeql/java/ql/src/codeql-suites/javascript-code-scanning.qls@v1.25.0
+        config-file: ./.github/codeql/codeql-config.yml
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
