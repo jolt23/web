@@ -1,5 +1,5 @@
 # Web
-Personal Website
+Personal Website | GitHub Actions :)
 
 ## Development server
 
