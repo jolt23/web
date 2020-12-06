@@ -18,6 +18,8 @@ jobs:
           node-version: 12.8
       - name: Install NPM dependencies
         run: npm install
+      - name: Audit NPM packages
+        run: npm audit
       - name: Build NPM App
         run: npm run build -- --prod
       - name: Archive production artifacts
