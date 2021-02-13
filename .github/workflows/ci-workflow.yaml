@@ -23,10 +23,7 @@ jobs:
       - name: Build NPM App
         run: npm run build -- --prod
       - name: Deploy to GitHub Pages
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com 
-          npm run deploy:github -- --repo=https://github.com/jolt23/web.git --no-silent
+        run: npm run deploy:github -- --repo=https://github.com/jolt23/web.git --name="jolt23" --email=github-actions@github.com --no-silent
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
