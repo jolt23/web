@@ -22,6 +22,8 @@ jobs:
         run: npm audit
       - name: Build NPM App
         run: npm run build -- --prod
+      - name: Deploy to GitHub Pages
+        run: npm run deploy:github
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
