@@ -12,10 +12,6 @@ jobs:
     steps:
       - name: Checkout out repository
         uses: actions/checkout@v2
-      - name: Set up Git User
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
       - name: Use Node.js 12.8
         uses: actions/setup-node@v1
         with:
@@ -27,7 +23,10 @@ jobs:
       - name: Build NPM App
         run: npm run build -- --prod
       - name: Deploy to GitHub Pages
-        run: npm run deploy:github -- --no-silent
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com 
+          npm run deploy:github -- --no-silent
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
