@@ -23,7 +23,7 @@ jobs:
       - name: Build NPM App
         run: npm run build -- --prod
       - name: Deploy to GitHub Pages
-        run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com --no-silent
+        run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Archive production artifacts
