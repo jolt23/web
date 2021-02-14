@@ -24,7 +24,7 @@ jobs:
         run: npm run lint
       - name: Test App
         run: npm run test
-      - name: Build NPM App
+      - name: Build App
         run: npm run build -- --prod
       - name: Deploy to GitHub Pages
         run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
