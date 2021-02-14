@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+import { Constants } from './app.constants';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -8,9 +9,9 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display my name', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('web app is running!');
+    expect(page.getTitleText()).toEqual(Constants.TITLE);
   });
 
   afterEach(async () => {
