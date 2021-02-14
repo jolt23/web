@@ -9,14 +9,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ngcc && husky install",
-    "deploy:github": "ng deploy --base-href=/web/"
+    "deploy:github": "ng deploy --base-href=/web/",
+    "pretty:staged": "pretty-quick --staged"
   },
   "private": true,
-  "husky": {
-    "hooks": {
-      "pre-commit": "ng lint"
-    }
-  },
   "dependencies": {
     "@angular/animations": "~11.0.3",
     "@angular/common": "~11.0.3",
