@@ -20,6 +20,8 @@ jobs:
         run: npm install
       - name: Audit NPM packages
         run: npm audit
+      - name: Lint App
+        run: npm run lint
       - name: Build NPM App
         run: npm run build -- --prod
       - name: Deploy to GitHub Pages
