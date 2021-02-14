@@ -7,7 +7,7 @@ export class AppPage {
   }
 
   getTitleText() {
-    var title = browser.getTitle().then(function(webpagetitle) {
+    const title = browser.getTitle().then((webpagetitle) => {
       if (webpagetitle === Constants.TITLE){
         return Constants.TITLE;
       } else {

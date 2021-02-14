@@ -14,7 +14,7 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  const TITLE: string = "joel Guilarte";
+  const TITLE = 'joel Guilarte';
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
