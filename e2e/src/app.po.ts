@@ -1,4 +1,5 @@
 import { browser, by, element } from 'protractor';
+import { Constants } from './app.constants';
 
 export class AppPage {
   navigateTo() {
@@ -6,6 +7,13 @@ export class AppPage {
   }
 
   getTitleText() {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    var title = browser.getTitle().then(function(webpagetitle) {
+      if (webpagetitle === Constants.TITLE){
+        return Constants.TITLE;
+      } else {
+        return ''
+      }
+    });
+    return title;
   }
 }
