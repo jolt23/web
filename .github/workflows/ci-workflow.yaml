@@ -24,12 +24,12 @@ jobs:
         run: npm run lint
       - name: Test App
         run: npm run test
-      - name: Build App
-        run: npm run build -- --prod
       - name: Deploy to GitHub Pages
         run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Build App
+        run: npm run build -- --prod
       - name: Archive production artifacts
         uses: actions/upload-artifact@v1
         with:
