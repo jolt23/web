@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ngcc && husky install",
-    "deploy:github": "ng deploy --base-href=/web/",
+    "deploy:github": "ng deploy --base-href=/web/ --no-silent",
     "pretty:staged": "pretty-quick --staged"
   },
   "private": true,
