@@ -16,23 +16,21 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.8
-      - name: Install NPM dependencies
+      - name: initialize
         run: npm install
-      - name: Audit NPM packages
-        run: npm audit --audit-level=high
-      - name: Lint App
+      - name: lint
         run: npm run lint
-      - name: Test App
+      - name: test
         run: npm run test
-      - name: Deploy to GitHub Pages
+      - name: deploy to github pages
         run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Clean Node Modules
+      - name: clean dist directory
         run: rm -rf dist/
-      - name: Build App
+      - name: build
         run: npm run build -- --prod
-      - name: Archive production artifacts
+      - name: archive
         uses: actions/upload-artifact@v1
         with:
           name: dist
@@ -43,17 +41,17 @@ jobs:
     runs-on: ubuntu-18.04
     needs: build
     steps:
-      - name: Checkout out repository
+      - name: checkout
         uses: actions/checkout@v2
-      - name: Download web dist from build job
+      - name: retrive archive
         uses: actions/download-artifact@v1
         with:
           name: dist
-      - name: Set up Python 3.7
+      - name: initialize python 3.7
         uses: actions/setup-python@v1
         with:
           python-version: '3.7'
-      - name: Run Ansible playbook through pipenv
+      - name: run deployment playbook
         shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESSS_KEY }}
