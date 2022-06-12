@@ -47,6 +47,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: web-app
+          path: dist
       - name: initialize python 3.7
         uses: actions/setup-python@v1
         with:
