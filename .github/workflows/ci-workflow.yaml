@@ -29,11 +29,11 @@ jobs:
       - name: clean dist directory
         run: rm -rf dist/
       - name: build
-        run: npm run build -- --prod
+        run: npm run build:prod
       - name: archive
         uses: actions/upload-artifact@v1
         with:
-          name: dist
+          name: web-app
           path: dist
   publish:
     name: Publish web artifacts
@@ -46,7 +46,7 @@ jobs:
       - name: retrive archive
         uses: actions/download-artifact@v1
         with:
-          name: dist
+          name: web-app
       - name: initialize python 3.7
         uses: actions/setup-python@v1
         with:
