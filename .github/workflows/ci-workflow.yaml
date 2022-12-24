@@ -8,14 +8,14 @@ on:
 jobs:
   build:
     name: Build Angular
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout out repository
-        uses: actions/checkout@v2
-      - name: Use Node.js 12.8
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 12.8
+          node-version: 16.x
       - name: initialize
         run: npm install
       - name: lint
@@ -38,7 +38,7 @@ jobs:
   publish:
     name: Publish web artifacts
     if: contains(github.ref, 'main')
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     needs: build
     steps:
       - name: checkout
