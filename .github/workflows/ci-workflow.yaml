@@ -48,10 +48,10 @@ jobs:
         with:
           name: web-app
           path: dist
-      - name: initialize python 3.7
+      - name: initialize python 3.9
         uses: actions/setup-python@v1
         with:
-          python-version: '3.7'
+          python-version: '3.9'
       - name: run deployment playbook
         shell: bash
         env:
