@@ -31,10 +31,7 @@ module.exports = function (config) {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser
     },
     coverageReporter: {
-      dir: require('path').join(
-        __dirname,
-        '<%= relativePathToWorkspaceRoot %>/coverage/<%= appName%>'
-      ),
+      dir: require('path').join(__dirname, './coverage/web'),
       subdir: '.',
       reporters: [{ type: 'html' }, { type: 'text-summary' }],
       fixWebpackSourcePaths: true,
