@@ -9,6 +9,7 @@ jobs:
   build:
     name: Build Angular
     runs-on: ubuntu-20.04
+    environment: staging
     steps:
       - name: Checkout out repository
         uses: actions/checkout@v3
