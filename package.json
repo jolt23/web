@@ -9,7 +9,7 @@
     "test": "ng test --code-coverage",
     "lint": "ng lint",
     "postinstall": "ngcc && husky install",
-    "deploy:github": "ng deploy --base-href=/web/",
+    "deploy:github": "ng deploy --base-href=/web/ --no-silent",
     "pretty:staged": "pretty-quick --staged"
   },
   "private": true,
