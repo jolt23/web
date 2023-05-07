@@ -7,9 +7,8 @@ on:
 
 jobs:
   build:
-    name: Build Angular
+    name: Build Web Application
     runs-on: ubuntu-20.04
-    environment: staging
     steps:
       - name: Checkout out repository
         uses: actions/checkout@v3
@@ -19,17 +18,17 @@ jobs:
           node-version: 16.x
       - name: initialize
         run: npm install
+      - name: test
+        run: npm run build
       - name: lint
         run: npm run lint
       - name: test
         run: npm run test
-      - name: deploy to github pages
-        run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: clean dist directory
+        if: contains(github.ref, 'main')
         run: rm -rf dist/
       - name: build
+        if: contains(github.ref, 'main')
         run: npm run build:prod
       - name: archive
         uses: actions/upload-artifact@v1
@@ -39,11 +38,12 @@ jobs:
   publish:
     name: Publish web artifacts
     if: contains(github.ref, 'main')
-    runs-on: ubuntu-20.04
+    environment: production
     needs: build
+    runs-on: ubuntu-20.04
     steps:
       - name: checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: retrive archive
         uses: actions/download-artifact@v1
         with:
