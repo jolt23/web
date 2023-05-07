@@ -10,13 +10,13 @@ jobs:
     name: Build Web Application
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout out repository
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: initialize Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: initialize
+      - name: initialize build
         run: npm install
       - name: test
         run: npm run build
@@ -36,7 +36,7 @@ jobs:
           name: web-app
           path: dist
   publish:
-    name: Publish web artifacts
+    name: Publish Web Artifacts
     if: contains(github.ref, 'main')
     environment: production
     needs: build
@@ -49,11 +49,11 @@ jobs:
         with:
           name: web-app
           path: dist
-      - name: initialize python 3.9
+      - name: initialize Python 3.9
         uses: actions/setup-python@v1
         with:
           python-version: '3.9'
-      - name: run deployment playbook
+      - name: publish to production S3
         shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESSS_KEY }}

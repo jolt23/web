@@ -10,17 +10,17 @@ jobs:
     runs-on: ubuntu-20.04
     environment: development
     steps:
-      - name: Checkout out repository
+      - name: Checkout out
         uses: actions/checkout@v3
-      - name: Use Node.js 16.x
+      - name: initialize Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-      - name: initialize
+      - name: initialize build
         run: npm install
       - name: build
         run: npm run build
-      - name: deploy to github pages
+      - name: publish to GitHub Pages
         run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
