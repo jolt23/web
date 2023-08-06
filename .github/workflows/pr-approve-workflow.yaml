@@ -12,15 +12,11 @@ jobs:
     steps:
       - name: Checkout out
         uses: actions/checkout@v3
-      - name: initialize Node.js 16.x
-        uses: actions/setup-node@v3
+      - uses: actions/setup-go@v3
         with:
-          node-version: 16.x
-      - name: initialize build
-        run: npm install
-      - name: build
-        run: npm run build
-      - name: publish to GitHub Pages
-        run: npm run deploy:github -- --name=jolt23 --email=github-actions@github.com
+          go-version: '1.20'
+      - uses: actions/checkout@v3
+      - name: build pipeline
+        run: go run dagger/main.go -pipeline=DeployGitHubPages
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

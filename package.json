@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --configuration production",
-    "test": "ng test --code-coverage",
+    "test": "ng test --browsers ChromeHeadlessNoSecurity --code-coverage",
     "lint": "ng lint",
     "postinstall": "ngcc && husky install",
     "deploy:github": "ng deploy --base-href=/web/ --no-silent",

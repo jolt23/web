@@ -12,24 +12,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: initialize Node.js 16.x
-        uses: actions/setup-node@v3
+      - uses: actions/setup-go@v3
         with:
-          node-version: 16.x
-      - name: initialize build
-        run: npm install
-      - name: test
-        run: npm run build
-      - name: lint
-        run: npm run lint
-      - name: test
-        run: npm run test
-      - name: clean dist directory
-        if: contains(github.ref, 'main')
-        run: rm -rf dist/
-      - name: build
-        if: contains(github.ref, 'main')
-        run: npm run build:prod
+          go-version: '1.20'
+      - uses: actions/checkout@v3
+      - name: build pipeline
+        run: go run dagger/main.go -pipeline=Build
       - name: archive
         uses: actions/upload-artifact@v1
         with:

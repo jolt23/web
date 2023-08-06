@@ -5,13 +5,14 @@ process.env.CHROME_BIN = require('puppeteer').executablePath()
 
 module.exports = function (config) {
   config.set({
-    browsers: ['ChromeHeadless'],
+    browsers: ['ChromeHeadlessNoSecurity'],
     customLaunchers: {
-      ChromeHeadlessCI: {
+      ChromeHeadlessNoSecurity: {
         base: 'ChromeHeadless',
         flags: [
-          '--no-sandbox',
           '--headless',
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
           '--disable-gpu',
           '--disable-translate',
           '--disable-extensions',
