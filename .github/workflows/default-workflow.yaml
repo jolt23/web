@@ -12,12 +12,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+      - name: initialize Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          go-version: '1.20'
+          node-version: 16.x
       - uses: actions/checkout@v3
-      - name: build pipeline
-        run: go run dagger/main.go -pipeline=Build
+      - name: initialize dependencies
+        run: npm install
+      - name: deploy to github pages
+        run: dagger run node --loader ts-node/esm ./build.mts --pipeline build
       - name: archive
         uses: actions/upload-artifact@v1
         with:
