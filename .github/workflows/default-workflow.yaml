@@ -19,8 +19,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: initialize dependencies
         run: npm install
-      - name: deploy to github pages
-        run: dagger run node --loader ts-node/esm ./build.mts --pipeline build
+      - name: build
+        run: node --loader ts-node/esm ./build.mts --pipeline build
       - name: archive
         uses: actions/upload-artifact@v1
         with:

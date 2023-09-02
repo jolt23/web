@@ -20,6 +20,6 @@ jobs:
       - name: initialize dependencies
         run: npm install
       - name: deploy to github pages
-        run: dagger run node --loader ts-node/esm ./build.mts --pipeline deployGitHubPages
+        run: node --loader ts-node/esm ./build.mts --pipeline deployGitHubPages
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
