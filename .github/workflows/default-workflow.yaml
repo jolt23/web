@@ -25,7 +25,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: web-app
-          path: dist
+          path: build/dist
   publish:
     name: Publish Web Artifacts
     if: contains(github.ref, 'main')
