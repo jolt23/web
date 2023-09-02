@@ -79,7 +79,7 @@ function build(client: Client, source: Directory, node: Container) {
   // build application
   // write the build output to the host
   return test
-    .withExec(['npm', 'run', 'build'])
+    .withExec(['npm', 'run', 'build:prod'])
     .directory('./dist')
     .export('./build/dist')
 }
@@ -106,6 +106,7 @@ function deployGitHubPages(client: Client, source: Directory, node: Container) {
     .withMountedCache('/src/node_modules', nodeCache)
     .withWorkdir('/src')
     .withExec(['npm', 'install'])
+    .withExec(['npm', 'run', 'build'])
 
   let dist = client.host().directory('./build/dist')
 
