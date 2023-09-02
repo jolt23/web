@@ -37,11 +37,11 @@ connect(
 
     switch (pipeline) {
       case 'build': {
-        build(client, source, node)
+        await build(client, source, node)
         break
       }
       case 'deployGitHubPages': {
-        deployGitHubPages(client, source, node)
+        await deployGitHubPages(client, source, node)
         break
       }
       case 'deployFirebase': {
@@ -72,14 +72,13 @@ function build(client: Client, source: Directory, node: Container) {
   let lint = runner.withExec(['npm', 'run', 'lint'])
 
   // run tests
-  let test = lint
-    .withExec(['npm', 'run', 'test'])
-    .directory('./coverage')
-    .export('./build/coverage')
+  let test = lint.withExec(['npm', 'run', 'test'])
+
+  test.directory('./coverage').export('./build/coverage')
 
   // build application
   // write the build output to the host
-  let build = lint
+  return test
     .withExec(['npm', 'run', 'build'])
     .directory('./dist')
     .export('./build/dist')
@@ -111,7 +110,7 @@ function deployGitHubPages(client: Client, source: Directory, node: Container) {
   let dist = client.host().directory('./build/dist')
 
   // execute github pages deployment
-  runner
+  return runner
     .withDirectory('./dist', dist)
     .withExec([
       'npm',
