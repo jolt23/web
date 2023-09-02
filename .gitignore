@@ -1,20 +1,32 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-### Angular
+# Angular
 
-# compiled output
+## compiled output
+/build
 /dist
 /tmp
 /out-tsc
-# Only exists if Bazel was run
+## Only exists if Bazel was run
 /bazel-out
 
 # dependencies
 /node_modules
+*/npm-debug.log
 
 # profiling files
 chrome-profiler-events*.json
 speed-measure-plugin*.json
+
+# firebase
+**/.firebase
+**/.firebaserc
+lerna-debug.log
+service-account-credentials.json
+**/ui-debug.log
+**/database-debug.log
+**/firebase-debug.log
+**/pubsub-debug.log
 
 # IDEs and editors
 /.idea
