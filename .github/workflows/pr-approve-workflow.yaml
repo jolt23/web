@@ -17,6 +17,11 @@ jobs:
         with:
           node-version: 16.x
       - uses: actions/checkout@v3
+      - name: retrive archive
+        uses: actions/download-artifact@v1
+        with:
+          name: web-app
+          path: build/dist
       - name: initialize dependencies
         run: npm install
       - name: deploy to github pages
