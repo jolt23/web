@@ -23,3 +23,9 @@ jobs:
         run: node --loader ts-node/esm ./build.mts --pipeline deployGitHubPages
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: deploy to firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PERSONAL_APP_395017 }}'
+          projectId: personal-app-395017
