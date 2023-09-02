@@ -108,11 +108,8 @@ function deployGitHubPages(client: Client, source: Directory, node: Container) {
     .withExec(['npm', 'install'])
     .withExec(['npm', 'run', 'build'])
 
-  let dist = client.host().directory('./build/dist')
-
   // execute github pages deployment
   return runner
-    .withDirectory('./dist', dist)
     .withExec([
       'npm',
       'run',
