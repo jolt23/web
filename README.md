@@ -27,7 +27,3 @@ This workflow triggers on each PR and main branch commit.
 #### PR Builds
 
 All PR's trigger the build job defined in the ci-workflow. This job handles downloading dependencies, executing tests and deploying to GitHub Pages. As well as archiving a production build artifact.
-
-#### Main Branch Builds
-
-In addtion to the build job, the production branch executes the publish job which uses ansible to syncronize the generated production builds to S3.
