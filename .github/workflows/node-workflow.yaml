@@ -25,6 +25,7 @@ jobs:
       - name: test
         run: npm test
       - name: archive
+        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: web-app
