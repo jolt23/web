@@ -207,6 +207,11 @@
       right: 0;
       position: absolute;
     }
+
+    .uk-height-medium {
+      height: auto;
+      margin-top: 50px;
+    }
   }
 
   #image_me {
@@ -223,12 +228,5 @@
   #image_me {
     height: 75px;
     widows: 75px;
-  }
-
-  .page-2 {
-    .uk-height-medium {
-      height: none;
-      margin-top: 50px;
-    }
   }
 }
