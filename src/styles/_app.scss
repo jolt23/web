@@ -79,6 +79,12 @@
   .page-1 {
     background-color: transparent;
 
+    .uk-grid {
+      background-color: rgba(173, 216, 230, 0.8);
+      padding: 60px;
+      border-radius: 25px;
+    }
+
     .uk-first-column {
       padding-left: 0px;
     }
