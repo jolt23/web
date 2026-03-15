@@ -1,17 +1,21 @@
-name: Deploy Main to Firebase
+name: Deploy Production Channel
 
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: [Build Node]
+    types: [completed]
 
 jobs:
   deploy-production:
     name: Deploy Production Channel
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push' && github.event.workflow_run.head_branch == 'main'
     environment: production
     runs-on: ubuntu-24.04
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
       - name: initialize Node.js
         uses: actions/setup-node@v4
         with:
