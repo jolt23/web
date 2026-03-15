@@ -55,3 +55,8 @@ testem.log
 # system files
 .DS_Store
 Thumbs.db
+
+# dotenv
+.env
+.env.local
+.env.production

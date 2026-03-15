@@ -1,16 +1,17 @@
 .page-wrapper {
+  position: relative;
   height: 100vh;
 
   .background {
     position: fixed;
-    height:100%;
+    height: 100%;
     width: 100%;
+    z-index: 0;
   }
 
   .section {
     height: 100%;
     padding: 0;
-
   }
 
   section {
@@ -18,13 +19,15 @@
     height: 100%;
     width: 100%;
 
+    z-index: 1;
+
     h1.opening-act-h1 {
       margin: 20px 0 0 0;
       font-family: 'Poiret One', cursive;
     }
-    
+
     .next-page-nav-button {
-      color: #FFF;
+      color: #fff;
       border: 0;
       background-color: transparent;
       padding-bottom: 30px;
@@ -39,7 +42,7 @@
       }
 
       a {
-        color: #FFF;
+        color: #fff;
       }
 
       :focus {
@@ -60,14 +63,14 @@
   .uk-tab {
     .uk-active {
       a {
-        color: #FFF;
-        border-color: #FFF;
+        color: #fff;
+        border-color: #fff;
       }
     }
 
     * {
       a {
-        font-size: 1.8rem
+        font-size: 1.8rem;
       }
     }
   }
@@ -80,12 +83,24 @@
     }
 
     p {
-      color: #FFF;
+      color: #fff;
     }
   }
 
   .page-2 {
-    background-color: #425A78;
+    background-color: #425a78;
+
+    /* fullpage.js wraps sections in fp-tableCell; target that wrapper so styles apply */
+    .fp-tableCell .uk-container,
+    .fp-section .uk-container {
+      background-color: rgba(173, 216, 230, 0.5) !important;
+      color: #fff !important;
+      border-radius: 12px !important;
+      padding: 1.5rem !important;
+      backdrop-filter: blur(4px) !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
 
     .uk-first-column {
       padding-left: 0px;
@@ -96,41 +111,81 @@
       text-align: center;
 
       a {
-        color: #FFF;
+        color: #fff;
       }
     }
   }
 }
 
 @-webkit-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 @-moz-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 @-o-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 @-ms-keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 @keyframes bounce {
-  0% { top: 0; }
-  50% { top: -0.2em; }
-  70% { top: -0.3em; }
-  100% { top: 0; }
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -0.2em;
+  }
+  70% {
+    top: -0.3em;
+  }
+  100% {
+    top: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -143,7 +198,7 @@
     }
   }
 
-  #image_me{
+  #image_me {
     height: 150px;
     widows: 150px;
   }
@@ -154,7 +209,7 @@
     font-size: 12px;
   }
 
-  #image_me{
+  #image_me {
     height: 75px;
     widows: 75px;
   }

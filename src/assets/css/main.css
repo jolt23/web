@@ -3,26 +3,39 @@ body {
 }
 
 .background {
-  background-color: #809EC4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background-color: #809ec4;
   background-image: url(../img/miami-aerial-4k.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Candal', sans-serif;
-  color: #FFF;
+  color: #fff;
 }
 
 @media (max-width: 2048px) {
   body {
     font-family: 'Raleway', sans-serif;
-    color: #FFF;
+    color: #fff;
   }
 
   .background {
-    background-color: #809EC4;
+    background-color: #809ec4;
     background-image: url(../img/miami-aerial-2k.jpg);
     background-repeat: no-repeat;
     background-position: center;
