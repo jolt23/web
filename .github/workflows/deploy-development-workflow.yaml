@@ -1,0 +1,30 @@
+name: Deploy PR Preview to Firebase
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy-preview:
+    name: Deploy Development Channel
+    environment: development
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: initialize Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+      - name: npm initialize
+        run: npm ci
+      - name: build
+        run: npm run build --if-present
+      - name: deploy PR preview to firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PERSONAL_APP_395017 }}'
+          channelId: pr-${{ github.event.pull_request.number }}
+          projectId: personal-app-395017
