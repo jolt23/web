@@ -21,7 +21,7 @@ export default function Home() {
           }
         }
       }
-    } catch (e) {
+    } catch {
       // ignore: fullpage may be initialized elsewhere
     }
   }, [])

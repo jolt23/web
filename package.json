@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "prepare": "husky install",
     "deploy:firebase": "firebase deploy --only hosting",
-    "pretty:staged": "pretty-quick --staged"
+    "pretty:staged": "pretty-quick --staged --pattern \"src/**/*.{ts,tsx,js,jsx,json,css,scss,html,md}\""
   },
   "private": true,
   "dependencies": {

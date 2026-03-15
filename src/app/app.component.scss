@@ -1,6 +1,7 @@
 .page-wrapper {
   position: relative;
   height: 100vh;
+  color: #fff;
 
   .background {
     position: fixed;
@@ -88,13 +89,19 @@
   }
 
   .page-2 {
-    background-color: #425a78;
+    /* page-2 specific text color */
+    --page-2-text: #08304a;
+    color: var(--page-2-text) !important;
+    background-color: rgba(173, 216, 230, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     /* fullpage.js wraps sections in fp-tableCell; target that wrapper so styles apply */
     .fp-tableCell .uk-container,
     .fp-section .uk-container {
       background-color: rgba(173, 216, 230, 0.5) !important;
-      color: #fff !important;
+      color: var(--page-2-text) !important;
       border-radius: 12px !important;
       padding: 1.5rem !important;
       backdrop-filter: blur(4px) !important;
@@ -111,8 +118,12 @@
       text-align: center;
 
       a {
-        color: #fff;
+        color: var(--page-2-text);
       }
+    }
+
+    a {
+      color: var(--page-2-text) !important;
     }
   }
 }
@@ -212,5 +223,12 @@
   #image_me {
     height: 75px;
     widows: 75px;
+  }
+
+  .page-2 {
+    .uk-height-medium {
+      height: none;
+      margin-top: 50px;
+    }
   }
 }
