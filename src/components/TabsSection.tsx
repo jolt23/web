@@ -38,36 +38,32 @@ export default function TabsSection() {
                     scaling teams, driving platform and CI/CD transformations,
                     and now helping organizations navigate the shift to
                     AI-driven engineering — where the tools are smarter and the
-                    pace is relentless. The same curiosity that pulls me into a
-                    complex system is what draws me to the racetrack and to new
-                    corners of the world with my family. Everything worth doing
-                    has layers. I like finding them.
+                    pace is relentless. Everything worth doing has layers. I
+                    like finding them.
                   </p>
                   <p>
                     My background spans front-end, API development, and DevOps
-                    with a current emphasis on building platform foundations
-                    that enable teams to move faster and reduce operational
-                    friction. I care deeply about mentoring and creating
-                    engineering cultures where good outcomes are the natural
-                    result of clear goals and the right tooling.
+                    with a current emphasis on building platform that enable
+                    teams to move faster and reduce toil. I care deeply about
+                    mentoring and creating engineering cultures where good
+                    outcomes are the natural result of clear goals, the right
+                    tooling and a good debate.
                   </p>
                   <p>
-                    I&apos;m the Cloud Engineering and DevSecOps Competency
-                    Leader within our Platform Engineering practice at Ernst
-                    &amp; Young (EY), where I design cloud-native developer
-                    platforms, reusable CI/CD pipelines, and DevSecOps practices
-                    to accelerate delivery and improve resilience. Previously I
-                    founded Kartografer LLC to help teams adopt DevOps and
-                    automation, worked in multiple engineering and leadership
-                    roles (including principal and senior engineering positions)
-                    at Royal Caribbean across both staff and contract
-                    engagements, co-founded Tailor Made Systems to deliver web
-                    and backend solutions to small businesses, and served as a
-                    senior software engineer at Chewy focusing on backend
-                    services and asset pipelines. My career began in web
-                    development at Royal Caribbean and has since centered on
-                    platform engineering, automation, and scaling reliable
-                    delivery for product teams.
+                    Currently I serve as Cloud Engineering and DevSecOps
+                    Competency Leader within our Platform Engineering practice
+                    at Ernst &amp; Young (EY), where I design cloud-native
+                    developer platforms, reusable CI/CD pipelines, and DevSecOps
+                    practices to accelerate delivery and improve resilience.
+                    Previously I founded Kartografer LLC to help teams adopt
+                    DevOps and automation, worked in multiple engineering and
+                    leadership roles (including principal engineer and
+                    engineering manager roles) at Royal Caribbean across both
+                    staff and contract engagements, and served as a senior
+                    software engineer at Chewy focusing on gRPC APIs and
+                    observability. My career began in web development has since
+                    centered on platform engineering, automation, and scaling
+                    reliable delivery for product teams.
                   </p>
                 </div>
               </div>
