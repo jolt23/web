@@ -2,31 +2,23 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <section className="section uk-section page-1">
-      <div className="uk-container uk-text-center">
-        <div
-          className="uk-flex-center uk-position-medium uk-position-center"
-          data-uk-grid=""
-        >
-          <div>
-            <h1>HELLO</h1>
-            <p>My Name is</p>
-            <h1 className="opening-act-h1">joel Guilarte</h1>
-          </div>
+    <section className="hero-section">
+      <div className="hero-container">
+        <div className="hero-image-accent">
+          <img
+            src="/assets/img/miami-city-center.jpg"
+            alt="Miamig City Center - Author: Pili Gonzalez Prieto"
+            onError={(e) => {
+              ;(e.target as HTMLImageElement).style.display = 'none'
+            }}
+          />
         </div>
-        <div className="uk-position-bottom next-page-nav-button">
-          <a href="#secondPage">
-            <span className="bounce next-page-stack fa-stack fa-lg">
-              <i
-                className="fas fa-circle-notch fa-stack-2x"
-                aria-hidden="true"
-              ></i>
-              <i
-                className="fas fa-chevron-down fa-stack-1x"
-                aria-hidden="true"
-              ></i>
-            </span>
-          </a>
+        <div className="hero-content-main">
+          <div className="name-tag">
+            <div className="name-tag-hello">HELLO</div>
+            <div className="name-tag-subtitle">My Name is</div>
+            <h1 className="name-tag-name">Joel Guilarte</h1>
+          </div>
         </div>
       </div>
     </section>

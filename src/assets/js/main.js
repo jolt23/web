@@ -1,5 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', 'thirdPage']
-  });
-});
+    anchors: ['firstPage', 'secondPage', 'thirdPage'],
+  })
+})
