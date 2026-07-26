@@ -6,8 +6,8 @@ export default function Hero() {
       <div className="hero-container">
         <div className="hero-image-accent">
           <img
-            src="/assets/img/miami-city-center.jpg"
-            alt="Miamig City Center - Author: Pili Gonzalez Prieto"
+            src="/img/miami-city-center.jpg"
+            alt="Miami City Center - Author: Pili Gonzalez Prieto"
             onError={(e) => {
               ;(e.target as HTMLImageElement).style.display = 'none'
             }}
